@@ -1,14 +1,18 @@
-# Local Agent
-Small local AI on a **Raspberry Pi 4** in my homelab, [psychos-lab](https://github.com/leoiburn/psychos-lab).
+# Local Agent 🤖
 
-## What it does
-- Runs small (~3B parameter) LLMs fully offline with Ollama
-- Uses them as a lightweight local agent for automation tasks
-- Doubles as a cybersecurity box (Kali Linux): tooling, practice labs and the attacker side of my AI purple-team cyber range
+A small AI that lives on a **Raspberry Pi**, no internet needed.
 
-## Lessons
-- 3B models in 4-bit quantization fit and run on a Pi's RAM
-- Keep the model API bound to localhost; reach it via SSH tunnel
+## What is it?
+A **Raspberry Pi** is a small, cheap computer. On it I run small AI language models (about **3 billion** "parameters", which is tiny for an AI) using a program called **Ollama**. The AI can answer questions and help with small automatic tasks.
 
-## Stack
-Raspberry Pi 4 · Kali Linux · Ollama · 3B models (e.g. qwen2.5 3B) · Python
+The same Pi runs **Kali Linux**, a system made for **cybersecurity**. I use it to practice finding weak spots in my own projects, so I can fix them before someone else finds them.
+
+## What I learned
+- Small AI models can run on small computers if you "shrink" them (this is called quantization).
+- Keep the AI private: only let the Pi itself talk to it, and connect from other computers through a secure tunnel (SSH).
+- Security tools are best learned by testing your **own** stuff.
+
+## Tools
+Raspberry Pi 4 · Kali Linux · Ollama · small 3B models · Python
+
+Part of my homelab: [psychos-lab](https://github.com/leoiburn/psychos-lab)
